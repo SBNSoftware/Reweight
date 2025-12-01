@@ -69,6 +69,8 @@ namespace rew   {
    void SetMaPath   (string p) { fMaPath     = p;    }
    // z-expansion specific options
    void SetZExpPath    (string p){ fZExpPath    = p;   }
+   void SetZExpT0   (double t0) { fZExpOverrideT0 = true; fZExpT0 = t0; }
+   void SetZExpTcut (double tcut) { fZExpOverrideTcut = true; fZExpTcut = tcut; }
    // RunningMa specific options
    void SetE0Path    (string p){ fE0Path    = p;   }
 
@@ -121,6 +123,10 @@ namespace rew   {
    double  fZExpTwkDial[fZExpMaxSyst]; ///<
    double  fZExpDef    [fZExpMaxSyst]; ///<
    double  fZExpCurr   [fZExpMaxSyst]; ///< array of current parameter values
+   bool    fZExpOverrideT0; ///< whether to override T0 value in z expansion
+   double  fZExpT0; ///< T0 override value
+   bool    fZExpOverrideTcut; ///< whether to override Tcut value in z expansion
+   double  fZExpTcut; ///< Tcut override value
 
    double fRPATwkDial; ///< 0 = default, 1 = RPA off (changes Nieves CCQE only)
 
