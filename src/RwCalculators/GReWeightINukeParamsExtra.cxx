@@ -56,6 +56,8 @@ GReWeightINukeParamsExtra::Fates::Fates(GReWeightINukeParams::HadronType_t ht)
   : GReWeightINukeParams::Fates::Fates( ht )
 {
   fModelSwitch = kNoSwitch;
+  fSystKELow = -1.;
+  fSystKEHigh = -1.;
 }
 //___________________________________________________________________________
 GReWeightINukeParamsExtra::Fates::~Fates(void)
