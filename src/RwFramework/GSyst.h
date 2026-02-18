@@ -113,48 +113,25 @@ typedef enum EGSyst {
 
   //
   // Intranuclear rescattering systematics.
-  // There are 3 sets of parameters:
+  // There are 2 sets of parameters:
   // - parameters that control the total rescattering probability, P(total)
   // - parameters that control the fraction of each process (`fate'), given a total rescat. prob., P(fate|total)
   // These parameters are considered separately for pions and nucleons.
-  // - parameters that control the kinematics of the scattering process
-  // 
+  //
 
   kINukeTwkDial_MFP_pi,      ///< tweak mean free path for pions
   kINukeTwkDial_MFP_N,       ///< tweak mean free path for nucleons
-  kINukeTwkDial_MFPLoE_N,       ///< tweak mean free path for nucleons, 0 <= KE < 150 MeV
-  kINukeTwkDial_MFPM1E_N,       ///< tweak mean free path for nucleons, 150 <= KE < 300 MeV
-  kINukeTwkDial_MFPM2E_N,       ///< tweak mean free path for nucleons, 300 <= KE < 600 MeV
-  kINukeTwkDial_MFPHiE_N,       ///< tweak mean free path for nucleons, 600 <= KE MeV
   kINukeTwkDial_FrCEx_pi,    ///< tweak charge exchange probability for pions, for given total rescattering probability
   // sd - hA no longer has elastic fate
   kINVALID_INukeTwkDial_FrElas_pi,   ///< tweak elastic         probability for pions, for given total rescattering probability
   kINukeTwkDial_FrInel_pi,   ///< tweak inelastic       probability for pions, for given total rescattering probability
   kINukeTwkDial_FrAbs_pi,    ///< tweak absorption      probability for pions, for given total rescattering probability
   kINukeTwkDial_FrPiProd_pi, ///< tweak pion production probability for pions, for given total rescattering probability
-
-  kINukeTwkDial_G4_N,     ///< tweak intranuclear scattering to G4 values
-  kINukeTwkDial_INCL_N,     ///< tweak intranuclear scattering to INCL values
-  kINukeTwkDial_G4LoE_N,     ///< tweak intranuclear scattering to G4 values, 0 <= KE < 150 MeV
-  kINukeTwkDial_INCLLoE_N,     ///< tweak intranuclear scattering to INCL values, 0 <= KE < 150 MeV
-  kINukeTwkDial_G4M1E_N,     ///< tweak intranuclear scattering to G4 values, 150 <= KE < 300 MeV
-  kINukeTwkDial_INCLM1E_N,     ///< tweak intranuclear scattering to INCL values, 300 <= KE < 300 MeV
-  kINukeTwkDial_G4M2E_N,     ///< tweak intranuclear scattering to G4 values, 300 <= KE < 600 MeV
-  kINukeTwkDial_INCLM2E_N,     ///< tweak intranuclear scattering to INCL values, 300 <= KE < 600 MeV
-  kINukeTwkDial_G4HiE_N,     ///< tweak intranuclear scattering to G4 values, 600 <= KE
-  kINukeTwkDial_INCLHiE_N,     ///< tweak intranuclear scattering to INCL values, 600 <= KE
-
   kINukeTwkDial_FrCEx_N,     ///< tweak charge exchange probability for nucleons, for given total rescattering probability
   kINVALID_INukeTwkDial_FrElas_N,    ///< tweak elastic         probability for nucleons, for given total rescattering probability
   kINukeTwkDial_FrInel_N,    ///< tweak inelastic       probability for nucleons, for given total rescattering probability
   kINukeTwkDial_FrAbs_N,     ///< tweak absorption      probability for nucleons, for given total rescattering probability
   kINukeTwkDial_FrPiProd_N,  ///< tweak pion production probability for nucleons, for given total rescattering probability
-
-  kINukeKinematicsTwkDial_NP_N, ///< tweak scattering angle of NP scatters for nucleons
-  kINukeKinematicsTwkDial_PP_N, ///< tweak scattering angle of PP and NN scatters for nucleons
-  kINukeKinematicsFixPiPro,     ///< tweak to fix pion production kinematics
-  kINukeKinematicsPiProBias,   ///< tweak to introduce bias to pion production momenta
-  kINukeKinematicsPiProBiaswFix,   ///< tweak to introduce bias to pion production momenta, including lorentz weight fixing
 
   //
   // Nuclear model
@@ -246,22 +223,10 @@ typedef enum EGSyst {
   // Alternative approach to CCQE form factors (z-expansion) vector form factor
   //
   kXSecTwkDial_ZExpELFF,
-  kXSecTwkDial_ZExpELFF_AP1,
-  kXSecTwkDial_ZExpELFF_AP2,
-  kXSecTwkDial_ZExpELFF_AP3,
-  kXSecTwkDial_ZExpELFF_AP4,
-  kXSecTwkDial_ZExpELFF_AN1,
-  kXSecTwkDial_ZExpELFF_AN2,
-  kXSecTwkDial_ZExpELFF_AN3,
-  kXSecTwkDial_ZExpELFF_AN4,
-  kXSecTwkDial_ZExpELFF_BP1,
-  kXSecTwkDial_ZExpELFF_BP2,
-  kXSecTwkDial_ZExpELFF_BP3,
-  kXSecTwkDial_ZExpELFF_BP4,
-  kXSecTwkDial_ZExpELFF_BN1,
-  kXSecTwkDial_ZExpELFF_BN2,
-  kXSecTwkDial_ZExpELFF_BN3,
-  kXSecTwkDial_ZExpELFF_BN4,
+  //
+  // Alternative approach to CCQE form factors (z-expansion) axial form factor
+  //
+  kXSecTwkDial_ZExpZAFF,
 
   //
   // Misc
@@ -329,16 +294,6 @@ public:
      case ( kINukeTwkDial_FrInel_N  ) :
      case ( kINukeTwkDial_FrAbs_N   ) :
      case ( kINukeTwkDial_FrPiProd_N) :
-     case ( kINukeTwkDial_G4_N) :
-     case ( kINukeTwkDial_INCL_N) :
-     case ( kINukeTwkDial_G4LoE_N) :
-     case ( kINukeTwkDial_INCLLoE_N) :
-     case ( kINukeTwkDial_G4M1E_N) :
-     case ( kINukeTwkDial_INCLM1E_N) :
-     case ( kINukeTwkDial_G4M2E_N) :
-     case ( kINukeTwkDial_INCLM2E_N) :
-     case ( kINukeTwkDial_G4HiE_N) :
-     case ( kINukeTwkDial_INCLHiE_N) :
         return true;
         break;
      default:
@@ -389,10 +344,6 @@ public:
  {
    switch(syst) {
      case ( kINukeTwkDial_MFP_N  ) :
-     case ( kINukeTwkDial_MFPLoE_N  ) :
-     case ( kINukeTwkDial_MFPM1E_N  ) :
-     case ( kINukeTwkDial_MFPM2E_N  ) :
-     case ( kINukeTwkDial_MFPHiE_N  ) :
        return true;
        break;
 
@@ -408,10 +359,6 @@ public:
    switch(syst) {
      case ( kINukeTwkDial_MFP_pi ) :
      case ( kINukeTwkDial_MFP_N  ) :
-     case ( kINukeTwkDial_MFPLoE_N  ) :
-     case ( kINukeTwkDial_MFPM1E_N  ) :
-     case ( kINukeTwkDial_MFPM2E_N  ) :
-     case ( kINukeTwkDial_MFPHiE_N  ) :
        return true;
        break;
 

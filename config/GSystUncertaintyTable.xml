@@ -37,9 +37,6 @@ values for each Reweight tweak dial. All of these have default values of zero.
    <param type="double" name="ZNormCCQE@PlusOneSigma"> 0.20 </param>
    <param type="double" name="ZNormCCQE@MinusOneSigma"> 0.15 </param>
 
-   <!-- The z-expansion axial FFs have keys for multiple parameter sets.
-        These are defaults from A. S. Meyer, M. Betancourt, R. Gran, and R. J. Hill, 
-	Phys. Rev. D 93 (2016) 113015 -->
    <param type="double" name="ZExpA1CCQE@PlusOneSigma"> 0.14 </param>
    <param type="double" name="ZExpA1CCQE@MinusOneSigma"> 0.14 </param>
 
@@ -204,15 +201,6 @@ values for each Reweight tweak dial. All of these have default values of zero.
    <param type="double" name="FrPiProd_pi@PlusOneSigma"> 0.20 </param>
    <param type="double" name="FrPiProd_pi@MinusOneSigma"> 0.20 </param>
 
-   <param type="double" name="FrKin_PiProFix_N"> 1 </param>
-   <param type="double" name="FrKin_PiProBiaswFix_N@PlusOneSigma">6</param>
-   <param type="double" name="FrKin_PiProBiaswFix_N@MinusOneSigma">6</param>
-   <param type="double" name="FrKin_PiProBias_N@PlusOneSigma">6</param>
-   <param type="double" name="FrKin_PiProBias_N@MinusOneSigma">6</param>
-
-   <param type="double" name="FrKin_NP_N"> 1 </param>
-   <param type="double" name="FrKin_PP_N"> 1 </param>
-
    <param type="double" name="FrCEx_N@PlusOneSigma"> 0.50 </param>
    <param type="double" name="FrCEx_N@MinusOneSigma"> 0.50 </param>
 
@@ -228,31 +216,6 @@ values for each Reweight tweak dial. All of these have default values of zero.
 
    <param type="double" name="FrPiProd_N@PlusOneSigma"> 0.20 </param>
    <param type="double" name="FrPiProd_N@MinusOneSigma"> 0.20 </param>
-
-   <param type="double" name="FrG4_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrG4_N@MinusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCL_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCL_N@MinusOneSigma"> 1.0 </param>
-
-   <param type="double" name="FrG4LoE_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrG4LoE_N@MinusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLLoE_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLLoE_N@MinusOneSigma"> 1.0 </param>
-
-   <param type="double" name="FrG4M1E_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrG4M1E_N@MinusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLM1E_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLM1E_N@MinusOneSigma"> 1.0 </param>
-
-   <param type="double" name="FrG4M2E_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrG4M2E_N@MinusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLM2E_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLM2E_N@MinusOneSigma"> 1.0 </param>
-
-   <param type="double" name="FrG4HiE_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrG4HiE_N@MinusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLHiE_N@PlusOneSigma"> 1.0 </param>
-   <param type="double" name="FrINCLHiE_N@MinusOneSigma"> 1.0 </param>
 
    <param type="double" name="RDecBR1gamma@PlusOneSigma"> 0.50 </param>
    <param type="double" name="RDecBR1gamma@MinusOneSigma"> 0.50 </param>
@@ -331,55 +294,8 @@ values for each Reweight tweak dial. All of these have default values of zero.
    <param type="double" name="ZExpELFFBN4CCQE@PlusOneSigma">  41.4534     </param>
    <param type="double" name="ZExpELFFBN4CCQE@MinusOneSigma"> 41.4534     </param>
 
- </param_set>
+   <param type="double" name="ZExpAFF@PlusOneSigma"> 1.0 </param>
+   <param type="double" name="ZExpAFF@MinusOneSigma"> 1.0 </param>
 
- <!-- Additional parameter sets for z-expansion axial form factors added by J. Plows -->
- <!-- T. Cai et al (MINERvA), Nature 614 (2023) 48-53, kmax=8 -->
- <param_set name="ZExpAxialFF-minervaNature">
-   <param type="double" name="ZExpA1CCQE@PlusOneSigma"> 0.31 </param>
-   <param type="double" name="ZExpA1CCQE@MinusOneSigma"> 0.31 </param>
-
-   <param type="double" name="ZExpA2CCQE@PlusOneSigma"> 0.7 </param>
-   <param type="double" name="ZExpA2CCQE@MinusOneSigma"> 0.7 </param>
-
-   <param type="double" name="ZExpA3CCQE@PlusOneSigma"> 1.9 </param>
-   <param type="double" name="ZExpA3CCQE@MinusOneSigma"> 1.9 </param>
-
-   <param type="double" name="ZExpA4CCQE@PlusOneSigma"> 3.5 </param>
-   <param type="double" name="ZExpA4CCQE@MinusOneSigma"> 3.5 </param>
- </param_set>
-
- <!-- A. Meyer et al (MINERvA), arXiv: 2512.14097, kmax=6 -->
- <!-- This publication also includes a LQCD fit so we put this in too -->
- <param_set name="ZExpAxialFF-minervaElementaryTarget">
-   <param type="double" name="ZExpA1CCQE@PlusOneSigma"> 0.24 </param>
-   <param type="double" name="ZExpA1CCQE@MinusOneSigma"> 0.24 </param>
-
-   <param type="double" name="ZExpA2CCQE@PlusOneSigma"> 0.30 </param>
-   <param type="double" name="ZExpA2CCQE@MinusOneSigma"> 0.30 </param>
-
-   <param type="double" name="ZExpA3CCQE@PlusOneSigma"> 0.0 </param>
-   <param type="double" name="ZExpA3CCQE@MinusOneSigma"> 0.0 </param>
-
-   <param type="double" name="ZExpA4CCQE@PlusOneSigma"> 0.0 </param>
-   <param type="double" name="ZExpA4CCQE@MinusOneSigma"> 0.0 </param>
- </param_set>
-
- <param_set name="ZExpAxialFF-LQCD">
-   <param type="double" name="ZExpA1CCQE@PlusOneSigma"> 0.052 </param>
-   <param type="double" name="ZExpA1CCQE@MinusOneSigma"> 0.052 </param>
-
-   <param type="double" name="ZExpA2CCQE@PlusOneSigma"> 0.13 </param>
-   <param type="double" name="ZExpA2CCQE@MinusOneSigma"> 0.13 </param>
-
-   <param type="double" name="ZExpA3CCQE@PlusOneSigma"> 0.0 </param>
-   <param type="double" name="ZExpA3CCQE@MinusOneSigma"> 0.0 </param>
-
-   <param type="double" name="ZExpA4CCQE@PlusOneSigma"> 0.0 </param>
-   <param type="double" name="ZExpA4CCQE@MinusOneSigma"> 0.0 </param>
- </param_set>
-
- <param_set name="CovarianceMatrix">
-   <param type="mat-double" name="ZExpELFF@CovarianceMatrix" importfile="true"> data/covariances/ELZExpFF.dat </param>
  </param_set>
 </alg_conf>

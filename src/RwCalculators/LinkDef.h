@@ -9,17 +9,10 @@
 #pragma link C++ namespace genie::rew;
 
 #pragma link C++ class genie::rew::GReWeightModel;
-
 #pragma link C++ class genie::rew::GReWeightINuke;
 #pragma link C++ class genie::rew::GReWeightINukeParams;
 #pragma link C++ class genie::rew::GReWeightINukeParams::Fates;
 #pragma link C++ class genie::rew::GReWeightINukeParams::MFP;
-
-#pragma link C++ class genie::rew::GReWeightINukeExtra;
-#pragma link C++ class genie::rew::GReWeightINukeParamsExtra;
-#pragma link C++ class genie::rew::GReWeightINukeParamsExtra::Fates;
-#pragma link C++ class genie::rew::GReWeightINukeParamsExtra::MFP;
-
 #pragma link C++ class genie::rew::GReWeightAGKY;
 #pragma link C++ class genie::rew::GReWeightFZone;
 #pragma link C++ class genie::rew::GReWeightFGM;
@@ -28,6 +21,8 @@
 #pragma link C++ class genie::rew::GReWeightDISNuclMod;
 #pragma link C++ class genie::rew::GReWeightNuXSecNCEL;
 #pragma link C++ class genie::rew::GReWeightNuXSecCCQE;
+#pragma link C++ class genie::rew::GReWeightNuXSecCCQEELFF;
+#pragma link C++ class genie::rew::GReWeightNuXSecCCQEZAFF;
 #pragma link C++ class genie::rew::GReWeightNuXSecCCQEvec;
 #pragma link C++ class genie::rew::GReWeightNuXSecCCQEaxial;
 #pragma link C++ class genie::rew::GReWeightNuXSecCCRES;
@@ -39,9 +34,6 @@
 #pragma link C++ class genie::rew::GReWeightXSecEmpiricalMEC;
 #pragma link C++ class genie::rew::GReWeightXSecMEC;
 #pragma link C++ class genie::rew::GReWeightDeltaradAngle;
-
-#pragma link C++ class genie::rew::GReWeightINukeKinematics;
-#pragma link C++ class genie::rew::GReWeightINukeKinematicsParams;
 
 #pragma link C++ ioctortype TRootIOCtor;
 
