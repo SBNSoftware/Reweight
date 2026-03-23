@@ -324,6 +324,17 @@ void GReWeightNuXSecCCQE::Reconfigure(void)
       alg_key << fZExpPath << "QEL-Z_A" << i+1;
       r.Set(alg_key.str(), fZExpCurr[i]);
     }
+
+    if (fZExpOverrideT0) {
+      ostringstream alg_key;
+      alg_key << fZExpPath << "QEL-T0";
+      r.Set(alg_key.str(), fZExpT0);
+    }
+    if (fZExpOverrideTcut) {
+      ostringstream alg_key;
+      alg_key << fZExpPath << "QEL-Tcut";
+      r.Set(alg_key.str(), fZExpTcut);
+    }
   }
   fXSecModel->Configure(r);
 
@@ -465,6 +476,12 @@ void GReWeightNuXSecCCQE::Init(void)
     fZExpMaxCoef = TMath::Min(fXSecModelConfig->GetInt(fZExpPath + "QEL-Kmax"),
     this->fZExpMaxSyst);
   }
+
+  // by default, take z-exp parameters from xml
+  fZExpOverrideT0 = false;
+  fZExpT0 = 0.;
+  fZExpOverrideTcut = false;
+  fZExpTcut = 0.;
 
   fNormTwkDial = 0.;
   fNormDef     = 1.;
