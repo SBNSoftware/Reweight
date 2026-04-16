@@ -213,6 +213,8 @@ bool GReWeightINukeParamsExtra::Fates::IsModelTransform(GSyst_t syst) const
 GReWeightINukeParamsExtra::MFP::MFP(GReWeightINukeParams::HadronType_t ht)
   : GReWeightINukeParams::MFP::MFP( ht )
 {
+  fSystKELow = -1.;
+  fSystKEHigh = -1.;
 }
 //___________________________________________________________________________
 GReWeightINukeParamsExtra::MFP::~MFP()
